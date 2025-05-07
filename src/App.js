@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import songs from "./songs";
+
 
 function App() {
+  const [song, setSong] = useState(songs[0]);
+  const [reveal, setReveal] = useState(false);
+
+  function nextSong(){
+    setSong(songs[Math.floor(Math.random()*songs.length)]);
+    setReveal(false);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <h1>Name The Song</h1>
+      { !reveal ? <audio controls src={song.file}>   </audio> : <p>{song.name}</p>}
+    
+      <button class="btn btn-secondary btn-wide" onClick={() => setReveal((r) => !r)}>Reveal Song</button>
+      <button class="btn btn-wide btn-soft" onClick={nextSong}>Next Song</button>
+
+    </main>
   );
 }
 
