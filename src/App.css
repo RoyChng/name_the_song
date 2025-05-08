@@ -1,8 +1,34 @@
-main{
+main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
   gap: 20px;
+  background-image: url("imgs/bg.png");
+  background-size: cover;
+  background-position: center;
 }
+
+.header-img {
+  width: max(30%, 300px);
+  margin-bottom: 20px;
+}
+
+.song-img {
+  width: 100px;
+}
+
+.rhap_container {
+  width: max(30%, 300px) !important;
+}
+  /* 
+  @media (max-width: 900px) {
+    .header-img {
+      width: 300px;
+    }
+
+    .rhap_container {
+      width: 300px !important;
+    }
+  } */
