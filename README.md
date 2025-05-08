@@ -1,6 +1,6 @@
 # Name The Song Game (for NYP guitar club)
 
-Very very popular songs among the kids.
+Very very popular songs among the kids. But some kids disagree.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
